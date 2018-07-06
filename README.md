@@ -9,7 +9,7 @@ I can not upload  the final zip file  because  of github 25MB file size limit.
 So I post the compile proccess
 1. One  must do some changing on the maven settings.xml accouding to url
    https://raw.githubusercontent.com/pentaho/maven-parent-poms/master/maven-support-files/settings.xml
-   By the way,the pluginGroups tag in the settings.xml is deprecated for my maven 3.9,so just remove it.
+   By the way,the pluginGroups tag in the settings.xml is deprecated for my maven 3.3.9,so just remove it.
 
 2. After importing my project ,run command:
    mvn clean package -Dmaven.test.skip  
