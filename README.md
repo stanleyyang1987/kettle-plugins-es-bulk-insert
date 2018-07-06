@@ -20,7 +20,7 @@ So I post the compile proccess
 4. elasticsearch 6.3.0 does not support the kettle BigNumber type.So if  you encount the exception:
    "cannot write xcontent for unknown value of type for java.math.BigDecimal"
     you can adjust your field type in kettle according to the elastiseaech xcontent source code:
-
+     ```java
       private void unknownValue(Object value, boolean ensureNoSelfReferences) throws IOException {
         if (value == null) {
             nullValue();
@@ -49,3 +49,4 @@ So I post the compile proccess
             throw new IllegalArgumentException("cannot write xcontent for unknown value of type " + value.getClass());
         }
     }
+    ```
